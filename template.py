@@ -7,7 +7,7 @@ logging.basicConfig(
     format="[%(asctime)s] - %(message)s"
 )
 
-project_name = "us_visa"
+project_name = "visa"
 
 list_of_files = [
 
