@@ -64,8 +64,8 @@ class DataIngestion:
             os.makedirs(dir_path, exist_ok=True)
 
             logging.info(f"Exporting train and test file path.")
-            train_set.to_csv(self.data_ingestion_config.training_file_path)
-            test_set.to_csv(self.data_ingestion_config.testing_file_path)
+            train_set.to_csv(self.data_ingestion_config.training_file_path, index=False, header=True)
+            test_set.to_csv(self.data_ingestion_config.testing_file_path, index=False, header=True)
             logging.info(f"Exported test and train file path")
         except Exception as e:
             logging.info(VisaException(e, sys))
